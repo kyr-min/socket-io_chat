@@ -1,4 +1,4 @@
-const socket = io('ws://socketio-realtime-chat.herokuapp.com/');
+const socket = io('https://socketio-realtime-chat.herokuapp.com/');
 
 socket.on('message', text => {
     const el = document.createElement('li');
