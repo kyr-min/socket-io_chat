@@ -2,6 +2,7 @@ const socket = io('https://socketio-realtime-chat.herokuapp.com/');
 
 socket.on('message', text => {
     const el = document.createElement('li');
+    text = text.replace("said", ":")
     el.innerHTML = text;
     document.querySelector('ul').appendChild(el);
 });
